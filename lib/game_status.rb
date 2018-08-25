@@ -44,7 +44,16 @@ def winner(board)
   end
 end
   
-  
+def play(board)
+      counter = 0
+  until counter == 9
+    counter += 1
+    turn(board)
+    if over?(board)
+      return winner(board)
+    end
+  end
+end
 #  name.include?
   #binding.pry
   
